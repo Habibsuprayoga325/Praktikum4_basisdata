@@ -40,4 +40,4 @@ INSERT INTO pegawai (idpegawai, nama_depan, nama_belakang, email, telepon, tgl_k
 
 berikut hasil outputnya :
 
-![Image](screenshots/ss1.png)
+![Image](ss/ss1.png)
