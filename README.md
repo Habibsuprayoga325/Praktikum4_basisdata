@@ -195,4 +195,129 @@ berikut hasil outputnya :
 
 
 ![Image](ss10.png)
-![Image](ss11.png)
+![Image](s11.png)
+
+lanjut ke perintah tugas praktikumnya :
+1. Untuk menampilkan jumlah hewan yang dimiliki setiap owner, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+```sql
+SELECT owner, COUNT(*) AS jumlah_hewan
+FROM hewan
+GROUP BY owner;
+```
+
+Perintah di atas akan mengambil 
+
+
+berikut hasil outputnya :
+
+
+![Image](ss12.png)
+
+2. Untuk menampilkan jumlah hewan berdasarkan spesies, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+```sql
+SELECT species, COUNT(*) AS jumlah_hewan
+FROM hewan
+GROUP BY species;
+```
+
+
+
+
+berikut hasil outputnya :
+
+
+![Image](ss13.png)
+
+
+3. Untuk menampilkan jumlah hewan berdasarkan jenis kelamin, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+```sql
+SELECT sex, COUNT(*) AS jumlah_hewan
+FROM hewan
+GROUP BY sex;
+```
+
+ 
+
+berikut hasil outputnya:
+
+
+![Image](ss14.png)
+
+
+4. Untuk menampilkan jumlah hewan berdasarkan spesies dan jenis kelamin, Anda dapat menggunakan perintah SQL SELECT dengan klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+```sql
+SELECT species, sex, COUNT(*) AS jumlah_hewan
+FROM hewan
+GROUP BY species, sex;
+```
+
+ 
+
+berikut hasil outputnya :
+
+
+![Image](ss15.png)
+
+
+5. Untuk menampilkan jumlah hewan berdasarkan spesies (cat dan dog saja) dan jenis kelamin, Anda dapat menggunakan perintah SQL SELECT dengan klausa WHERE untuk memfilter spesies yang diinginkan, serta klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+```sql
+SELECT species, sex, COUNT(*) AS jumlah_hewan
+FROM hewan
+WHERE species IN ('Cat', 'Dog')
+GROUP BY species, sex;
+```
+
+
+
+
+berikut hasil outputnya:
+
+
+![Image](ss16.png)
+
+
+6. Untuk menampilkan jumlah hewan berdasarkan jenis kelamin yang diketahui saja, Anda dapat menggunakan perintah SQL SELECT dengan klausa WHERE untuk memfilter data berdasarkan jenis kelamin yang tidak NULL, serta klausa GROUP BY dan fungsi agregat COUNT. Berikut adalah contoh kode SQL untuk melakukannya:
+
+```sql
+SELECT sex, COUNT(*) AS jumlah_hewan
+FROM hewan
+WHERE sex IS NOT NULL
+GROUP BY sex;
+```
+
+
+
+
+berikut hasil outputnya :
+
+
+![Image](ss17.png)
+
+## Evaluasi dan Pertanyaan
+
+- Tulis semua perintah-perintah SQL percobaan di atas beserta
+outputnya!
+
+terlampir diatas
+
+- Beri kesimpulan Anda!
+
+
+1. Filter Kondisi: Operator relasi (=, >, <, >=, <=, <>) digunakan untuk membandingkan antara dua nilai. Operator BETWEEN digunakan untuk memfilter data dalam rentang tertentu. Operator LIKE atau NOT LIKE digunakan untuk mencari data dengan menggunakan wildcard (_ atau %).
+
+2. Operator IN dan IS NULL: Operator IN digunakan untuk memfilter data yang terdapat dalam list tertentu. Operator IS NULL digunakan untuk menampilkan data dengan nilai NULL atau IS NOT NULL untuk menampilkan data yang bukan NULL.
+
+3. Pengurutan Data: Perintah ORDER BY digunakan untuk mengurutkan data berdasarkan satu atau beberapa kolom. ASCENDING atau ASC digunakan untuk pengurutan dari nilai terkecil ke terbesar, sedangkan DESCENDING atau DESC digunakan untuk pengurutan dari nilai terbesar ke terkecil.
+
+4. Fungsi Agregat: Fungsi agregat (COUNT, SUM, AVG, MIN, MAX) digunakan untuk melakukan perhitungan pada kolom-kolom dalam tabel. COUNT digunakan untuk menghitung jumlah baris, SUM digunakan untuk menjumlahkan nilai kolom, AVG digunakan untuk menghitung rata-rata, MIN digunakan untuk menampilkan nilai terkecil, dan MAX digunakan untuk menampilkan nilai terbesar.
+
+5. Klausa GROUP BY: Klausa GROUP BY digunakan untuk mengelompokkan data berdasarkan satu atau beberapa kolom. Ini memungkinkan penggunaan fungsi agregat seperti COUNT, SUM, AVG, MIN, MAX pada setiap grup data.
+
+6. Klausa HAVING: Klausa HAVING digunakan untuk memfilter hasil query berdasarkan kondisi tertentu setelah pengelompokan dengan GROUP BY dilakukan. Klausa HAVING berfungsi mirip dengan WHERE, tetapi diterapkan setelah pengelompokan data dilakukan.
+
+Dengan menggunakan kombinasi dari fitur-fitur di atas, kita dapat melakukan filter, pengurutan, dan perhitungan data sesuai dengan kebutuhan kita.
